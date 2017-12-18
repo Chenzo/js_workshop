@@ -57,7 +57,8 @@ gulp.task('javascripting', function() {
 	.pipe(sourcemaps.init())
 	.pipe(babel({
 		presets: ['env']
-	}))
+	}).on('error', console.error.bind(console)))
+	
 	.pipe(concat('scripts.js'))
 	.pipe(gulp.dest('./www/js'))
 	.pipe(uglify())

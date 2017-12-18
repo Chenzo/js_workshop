@@ -16,9 +16,9 @@ function aPromise() {
   
   function runMeFirst() {
 	  outputText("run me first function fired");
-	aPromise().then( (value) => {
-	  outputText("then this: " + value);
-	});
+			aPromise().then( (value) => {
+				outputText("then this: " + value);
+			});
 	outputText('I run even though were waiting on aPromise()');
   }
 
