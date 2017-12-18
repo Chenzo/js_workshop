@@ -1,3 +1,3 @@
 
 
-console.log("Ok fixed - wow");
+console.log("Called from two.js");

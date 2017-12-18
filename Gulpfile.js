@@ -20,7 +20,8 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
     sourcemaps = require('gulp-sourcemaps'),
     pump = require('pump'),
-    replace = require('gulp-replace');
+	replace = require('gulp-replace');
+	babel = require('gulp-babel');
 
 var browserSync = require('browser-sync').create();
 
@@ -54,6 +55,9 @@ gulp.task('updateCacheBuster', function(){
 gulp.task('javascripting', function() {
 	gulp.src('./src/js/**/*.js')
 	.pipe(sourcemaps.init())
+	.pipe(babel({
+		presets: ['env']
+	}))
 	.pipe(concat('scripts.js'))
 	.pipe(gulp.dest('./www/js'))
 	.pipe(uglify())

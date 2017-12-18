@@ -16,7 +16,17 @@
     </head>
     <body class="home">
 
-    
+        <seciton class="top">
+
+            <h1>JS Testing</h1>
+
+
+            <textarea id="output" rows="10" cols="100"></textarea>
+
+        </seciton>
         
+        <!-- <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script> -->
+        <script src="/js/scripts.min.js"></script>
+
     </body>
 </html>
